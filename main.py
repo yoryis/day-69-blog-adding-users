@@ -31,7 +31,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 # Gravatar images for comments in post.html
-gravatar = Gravatar(app, size=100, rating='g', default='retro', force_default=False, force_lower=False, use_ssl=False, base_url=None)
+gravatar = Gravatar(app, size=100, rating='g', default='retro', force_default=False, force_lower=False, use_ssl=False,
+                    base_url=None)
 
 
 # uses Flask-Login is the LoginManager class
@@ -115,7 +116,7 @@ class Comment(db.Model):
 
 
 # Line below only required once, when creating DB
-db.create_all()
+# db.create_all()
 
 
 @app.route('/')
